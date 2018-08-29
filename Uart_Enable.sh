@@ -12,6 +12,7 @@ case $yn in
 		echo "# Uart Enable" >> /boot/config.txt;
 		echo "dtparam=uart0=on" >> /boot/config.txt
 		echo "enable_uart=1" >> /boot/config.txt;
+		echo "dtoverlay=pi3-miniuart-bt" >> /boot/config.txt;
 		sed -i "s/console=tty1//g" /boot/cmdline.txt
 		sed -i "s/console=serial0/console=tty1/g" /boot/cmdline.txt
 		echo "Please Restart your system"
